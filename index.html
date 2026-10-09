@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PersonaPulse Elite — Editorial Intelligence & Live MiroFish Swarm Graph</title>
+  <meta name="description" content="Unmetered synthetic focus group intelligence. Observe live 50-agent interaction networks, consensus cascades, and editorial copy diagnostics.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- Broadsheet Newspaper Masthead -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <div style="display: flex; align-items: center; gap: 1.25rem;">
+        <span class="mono-tag" style="color: var(--ink-primary); font-weight: 700;">VOL. IV • NO. 42</span>
+        <span id="mastheadDate">Wednesday, October 7, 2026</span>
+        <span>Global Swarm Edition</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <span class="stamp-badge free">
+          <span>●</span> Zero Paywall • Public Research Edition
+        </span>
+        <span class="stamp-badge active">
+          <span>●</span> 50 Active MiroFish Agents
+        </span>
+      </div>
+    </div>
+
+    <div class="masthead-center">
+      <div class="mono-tag" style="color: var(--accent-terracotta); margin-bottom: 0.35rem; letter-spacing: 0.25em;">
+        THE AUTONOMOUS SYNTHETIC INTELLIGENCE DISPATCH
+      </div>
+      <h1 class="masthead-title">
+        PersonaPulse <em>Elite</em>
+      </h1>
+      <p class="masthead-sub">
+        Live MiroFish Swarm Simulation & Editorial Website Diagnostics for Modern Builders
+      </p>
+    </div>
+
+    <div class="masthead-bottom">
+      <span>"Unfiltered Consensus Through Multi-Agent Network Dynamics"</span>
+      <span style="font-family: var(--font-mono); font-size: 0.75rem;">
+        Network Status: <strong style="color: var(--accent-sage);">50 Nodes in Equilibrium</strong>
+      </span>
+    </div>
+  </header>
+
+  <!-- Main Editorial Layout -->
+  <main class="app-container">
+
+    <!-- Intake Dispatch: URL & Manuscript -->
+    <section class="editorial-card">
+      <div class="card-header-row">
+        <div>
+          <span class="mono-tag" style="color: var(--accent-navy);">DISPATCH INTAKE</span>
+          <h2 class="card-title">Website & Pitch Manuscript to Examine</h2>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="tabUrlBtn" class="btn-editorial-primary" style="padding: 0.35rem 0.85rem; font-size: 0.78rem;">
+            🌐 Live Web URL
+          </button>
+          <button id="tabManuscriptBtn" class="btn-editorial-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.78rem;">
+            ✍️ Draft Manuscript
+          </button>
+        </div>
+      </div>
+
+      <!-- Live URL Input View -->
+      <div id="urlInputView">
+        <label style="display: block; fontSize: 0.8rem; color: var(--ink-muted); margin-bottom: 0.4rem;">
+          Target Destination URL (Unrestricted, 100% free research):
+        </label>
+        <div style="display: flex; gap: 0.75rem;">
+          <input
+            type="text"
+            id="targetUrlInput"
+            class="editorial-input"
+            value="https://apexinvoice.io"
+            placeholder="https://yourwebsite.com"
+            style="font-family: var(--font-mono); font-size: 0.9rem;"
+          />
+          <button id="runSimBtn" class="btn-editorial-primary" style="white-space: nowrap;">
+            ⚡ Deploy 50-Agent Swarm
+          </button>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem;">
+          <span style="font-size: 0.75rem; color: var(--ink-whisper); text-transform: uppercase;">Sample Editions:</span>
+          <button class="preset-chip btn-editorial-secondary" data-site="saas_invoicing" style="padding: 2px 8px; font-size: 0.75rem;">B2B Invoicing SaaS</button>
+          <button class="preset-chip btn-editorial-secondary" data-site="ai_studio" style="padding: 2px 8px; font-size: 0.75rem;">AI Video Studio</button>
+          <button class="preset-chip btn-editorial-secondary" data-site="ecommerce_sneakers" style="padding: 2px 8px; font-size: 0.75rem;">D2C Running Shoes</button>
+        </div>
+      </div>
+
+      <!-- Draft Manuscript View -->
+      <div id="manuscriptInputView" style="display: none; flex-direction: column; gap: 0.75rem;">
+        <div>
+          <label style="display: block; font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.25rem;">Hero Headline:</label>
+          <input type="text" id="manuscriptHeadline" class="editorial-input" placeholder="e.g. Next-Generation Revenue Orchestration for Modern Ecosystems">
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.25rem;">Subheadline / Value Statement:</label>
+          <input type="text" id="manuscriptSubhead" class="editorial-input" placeholder="e.g. Automate payment reminders, streamline accounting, and reduce churn.">
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
+          <div>
+            <label style="display: block; font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.25rem;">Pricing Structure:</label>
+            <input type="text" id="manuscriptPricing" class="editorial-input" placeholder="e.g. $149/mo (Billed Annually)">
+          </div>
+          <div>
+            <label style="display: block; font-size: 0.78rem; color: var(--ink-muted); margin-bottom: 0.25rem;">Call to Action:</label>
+            <input type="text" id="manuscriptCta" class="editorial-input" placeholder="e.g. Request Enterprise Consultation">
+          </div>
+        </div>
+        <button id="runManuscriptBtn" class="btn-editorial-primary" style="align-self: flex-start; margin-top: 0.5rem;">
+          ⚡ Deploy Swarm on Manuscript
+        </button>
+      </div>
+    </section>
+
+    <!-- Top 2-Column Editorial Spread -->
+    <div class="editorial-two-col">
+      
+      <!-- Left: MiroFish Live Interaction Network Graph -->
+      <section class="editorial-card" style="padding: 1.5rem; position: relative;">
+        <div class="card-header-row">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-terracotta);">LIVE MIROFISH ADJACENCY MATRIX</span>
+            <h2 class="card-title">Multi-Agent Discourse & Consensus Graph</h2>
+          </div>
+          <div style="display: flex; gap: 0.4rem;">
+            <button class="filter-cluster-btn btn-editorial-primary" data-cluster="ALL" style="padding: 0.35rem 0.65rem; font-size: 0.72rem;">All 50 Nodes</button>
+            <button class="filter-cluster-btn btn-editorial-secondary" data-cluster="pricing_resistance" style="padding: 0.35rem 0.65rem; font-size: 0.72rem;">Pricing Resistance</button>
+            <button class="filter-cluster-btn btn-editorial-secondary" data-cluster="value_advocacy" style="padding: 0.35rem 0.65rem; font-size: 0.72rem;">Value Advocates</button>
+            <button class="filter-cluster-btn btn-editorial-secondary" data-cluster="jargon_confusion" style="padding: 0.35rem 0.65rem; font-size: 0.72rem;">Headline Skeptics</button>
+          </div>
+        </div>
+
+        <!-- Canvas Graph -->
+        <div style="position: relative; border: 1px solid var(--border-rule); background: #FAFAFA; border-radius: 3px; overflow: hidden;">
+          <canvas id="mirofishCanvas" width="720" height="480" style="width: 100%; height: auto; display: block; cursor: grab;"></canvas>
+          
+          <div style="position: absolute; bottom: 10px; left: 10px; background: rgba(255, 255, 255, 0.94); border: 1px solid var(--border-rule); border-radius: 2px; padding: 4px 10px; font-size: 0.72rem; display: flex; gap: 0.85rem; align-items: center;">
+            <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #15803D;"></span> Converted</span>
+            <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #C2410C;"></span> Pricing Objection</span>
+            <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 8px; height: 8px; border-radius: 50%; background: #B91C1C;"></span> Headline Confusion</span>
+            <span style="color: var(--ink-muted); font-style: italic;">Drag nodes or click to inspect</span>
+          </div>
+        </div>
+
+        <!-- Selected Node Dossier -->
+        <div id="nodeDossierBox" style="margin-top: 1rem; padding: 1rem; background: var(--bg-muted); border-left: 3px solid var(--accent-navy); border-radius: 2px; display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem;">
+              <span id="dossierId" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-navy);">AGENT_01</span>
+              <strong id="dossierName" style="font-size: 0.95rem; color: var(--ink-primary);">Marcus Vance</strong>
+              <span id="dossierRole" style="font-size: 0.8rem; color: var(--ink-muted);">— VP of Product at FinTech Global</span>
+            </div>
+            <p id="dossierThought" style="font-style: italic; font-size: 0.88rem; color: var(--ink-body); margin: 0.35rem 0;">
+              "Inspecting headline and layout value proposition..."
+            </p>
+            <div id="dossierMeta" style="font-size: 0.75rem; color: var(--ink-muted);">
+              Demographic: <strong>B2B Enterprise</strong> • Price Sensitivity: <strong>35%</strong> • Skepticism: <strong>85%</strong>
+            </div>
+          </div>
+          <span id="dossierBadge" class="stamp-badge active">EVALUATING</span>
+        </div>
+      </section>
+
+      <!-- Right: Broadsheet Funnel & Consensus Attrition -->
+      <section class="editorial-card">
+        <div class="card-header-row">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-terracotta);">SYNTHETIC METRICS</span>
+            <h2 class="card-title">Consensus & Funnel Attrition</h2>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.7rem; color: var(--ink-muted); text-transform: uppercase;">Consensus Rate:</span>
+            <div id="consensusRateDisplay" style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; color: var(--accent-terracotta); line-height: 1;">
+              28%
+            </div>
+          </div>
+        </div>
+
+        <!-- 4-Stage Bars -->
+        <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1.5rem;">
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; color: var(--ink-primary);">I. Headline Impression (First 5s)</span>
+              <span id="stage1Label" style="font-family: var(--font-mono); color: var(--ink-muted);">64% retained</span>
+            </div>
+            <div class="broadsheet-funnel-bar">
+              <div id="stage1Fill" class="broadsheet-funnel-fill" style="width: 64%; background: var(--ink-primary);"></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; color: var(--ink-primary);">II. Value Comprehension</span>
+              <span id="stage2Label" style="font-family: var(--font-mono); color: var(--ink-muted);">48% retained</span>
+            </div>
+            <div class="broadsheet-funnel-bar">
+              <div id="stage2Fill" class="broadsheet-funnel-fill" style="width: 48%; background: #475569;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; color: var(--ink-primary);">III. Pricing Scrutiny</span>
+              <span id="stage3Label" style="font-family: var(--font-mono); color: var(--accent-terracotta);">34% retained</span>
+            </div>
+            <div class="broadsheet-funnel-bar">
+              <div id="stage3Fill" class="broadsheet-funnel-fill" style="width: 34%; background: var(--accent-terracotta);"></div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 0.25rem;">
+              <span style="font-weight: 600; color: var(--ink-primary);">IV. Conversion Action</span>
+              <span id="stage4Label" style="font-family: var(--font-mono); color: var(--accent-sage); font-weight: 700;">28% converted</span>
+            </div>
+            <div class="broadsheet-funnel-bar">
+              <div id="stage4Fill" class="broadsheet-funnel-fill" style="width: 28%; background: var(--accent-sage);"></div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border: none; height: 1px; background: var(--border-rule); margin: 1.25rem 0;" />
+
+        <!-- Dominant Objection Clusters -->
+        <div>
+          <span class="mono-tag" style="color: var(--ink-muted); display: block; margin-bottom: 0.5rem;">
+            DOMINANT OBJECTION CLUSTERS:
+          </span>
+          <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+            <div style="padding: 0.6rem 0.75rem; background: var(--bg-muted); border-left: 3px solid var(--accent-terracotta); border-radius: 2px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600;">
+                <span style="color: var(--accent-terracotta);">Pricing Friction Cluster</span>
+                <span id="clusterPricingCount" style="font-family: var(--font-mono);">22 agents (44%)</span>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                Demanding monthly cancellation option and risk-free trial period.
+              </p>
+            </div>
+
+            <div style="padding: 0.6rem 0.75rem; background: var(--bg-muted); border-left: 3px solid var(--accent-crimson); border-radius: 2px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-weight: 600;">
+                <span style="color: var(--accent-crimson);">Headline Obscurity Cluster</span>
+                <span id="clusterJargonCount" style="font-family: var(--font-mono);">14 agents (28%)</span>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--ink-muted); margin-top: 0.2rem;">
+                Bounced due to high-context buzzwords with no plain English explanation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Bottom Editorial Spread: Copy Redline & Examination Room -->
+    <div class="editorial-bottom-col">
+      
+      <!-- Proofreader's Desk: Copy Redline Doctor -->
+      <section class="editorial-card">
+        <div class="card-header-row">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-crimson);">PROOFREADER'S DESK</span>
+            <h2 class="card-title">Editorial Manuscript Proofing & Redlines</h2>
+          </div>
+          <span class="stamp-badge free">+38% Projected Consensus Lift</span>
+        </div>
+
+        <p style="font-size: 0.85rem; color: var(--ink-muted); margin-bottom: 1rem;">
+          The MiroFish swarm identified that 38% of prospective customers abandon within 5 seconds due to conceptual abstraction. Below is the editorial redline:
+        </p>
+
+        <!-- Proofing Box 1: Headline -->
+        <div style="border: 1px solid var(--border-rule); background: var(--bg-paper); border-radius: 3px; padding: 0.9rem; margin-bottom: 0.85rem;">
+          <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--ink-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
+            Original Headline vs. Swarm-Proofed Alternative:
+          </div>
+          <div id="redlineOldHeadline" style="text-decoration: line-through; color: var(--accent-crimson); font-style: italic; font-size: 0.9rem; margin-bottom: 0.4rem;">
+            "Next-Gen Intelligent Revenue Orchestration for Modern Ecosystems"
+          </div>
+          <div id="redlineNewHeadline" style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--ink-primary); font-weight: 600; border-left: 3px solid var(--accent-sage); padding-left: 0.75rem;">
+            "Send Clean Invoices in 60 Seconds & Get Paid 3x Faster"
+          </div>
+        </div>
+
+        <!-- Proofing Box 2: CTA -->
+        <div style="border: 1px solid var(--border-rule); background: var(--bg-paper); border-radius: 3px; padding: 0.9rem; margin-bottom: 1.25rem;">
+          <div style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--ink-muted); text-transform: uppercase; margin-bottom: 0.35rem;">
+            Call to Action & Friction Barrier:
+          </div>
+          <div id="redlineOldCta" style="text-decoration: line-through; color: var(--accent-crimson); font-style: italic; font-size: 0.88rem; margin-bottom: 0.4rem;">
+            "$149 / mo (Billed Annually) • Request Enterprise Consultation"
+          </div>
+          <div id="redlineNewCta" style="font-family: var(--font-serif); font-size: 1.05rem; color: var(--accent-sage); font-weight: 600; border-left: 3px solid var(--accent-sage); padding-left: 0.75rem;">
+            "$29 / mo (Monthly Billing) • Start 14-Day Free Pilot"
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.78rem; color: var(--ink-muted); font-style: italic;">
+            Rewrites target variables and triggers immediate re-simulation.
+          </span>
+          <button id="applyRedlineBtn" class="btn-editorial-primary" style="background: var(--accent-terracotta); border-color: var(--accent-terracotta);">
+            ⚡ Apply Redline & Re-Simulate
+          </button>
+        </div>
+      </section>
+
+      <!-- Examination Room: Interrogation & Live Debate Ticker -->
+      <section class="editorial-card">
+        <div class="card-header-row">
+          <div>
+            <span class="mono-tag" style="color: var(--accent-navy);">EXAMINATION ROOM</span>
+            <h2 class="card-title">Swarm Interrogation & Real-Time Debrief</h2>
+          </div>
+          <div style="display: flex; gap: 0.4rem;">
+            <button class="chat-filter-btn btn-editorial-primary" data-cohort="ALL" style="padding: 0.3rem 0.65rem; font-size: 0.72rem;">All 50 Agents</button>
+            <button class="chat-filter-btn btn-editorial-secondary" data-cohort="BOUNCED" style="padding: 0.3rem 0.65rem; font-size: 0.72rem;">🔴 Skeptics</button>
+            <button class="chat-filter-btn btn-editorial-secondary" data-cohort="CONVERTED" style="padding: 0.3rem 0.65rem; font-size: 0.72rem;">🟢 Advocates</button>
+          </div>
+        </div>
+
+        <!-- Live Debate Ticker -->
+        <div style="background: var(--bg-muted); border: 1px solid var(--border-rule); border-radius: 3px; padding: 0.5rem 0.75rem; margin-bottom: 0.75rem; font-size: 0.75rem;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.25rem; color: var(--ink-muted);">
+            <span class="mono-tag" style="color: var(--accent-terracotta);">LIVE AGENT-TO-AGENT DISCOURSE TICKER:</span>
+            <span id="tickerExchangeCount">14 exchanges observed</span>
+          </div>
+          <div id="debateTickerBox" style="max-height: 55px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.2rem; font-family: var(--font-mono); font-size: 0.7rem;">
+            <div style="color: var(--accent-crimson);">[12:00:04] "Marcus Vance: $149/mo is hard to justify without monthly billing." ➔ "Elena Rostova: My CFO would decline this."</div>
+            <div style="color: var(--accent-sage);">[12:00:08] "Devon Brooks: The core capability solves a real pain." ➔ "Sophia Lin: I agree, ready to convert."</div>
+          </div>
+        </div>
+
+        <!-- Main Chat Messages -->
+        <div id="chatMessagesBox" style="height: 220px; overflow-y: auto; border: 1px solid var(--border-rule); background: #FFFFFF; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 0.75rem;">
+          <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <div style="font-size: 0.7rem; color: var(--ink-muted); margin-bottom: 0.15rem;">
+              <strong>Editorial Moderator</strong> (MiroFish Protocol)
+            </div>
+            <div style="max-width: 85%; padding: 0.6rem 0.85rem; background: var(--bg-paper); border: 1px solid var(--border-rule); border-radius: 3px; font-family: var(--font-serif); font-style: italic; font-size: 0.88rem;">
+              "The 50-agent swarm has initialized their network topology and evaluated your site. Direct inquiries may be submitted below."
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Question Chips -->
+        <div style="display: flex; gap: 0.4rem; margin-bottom: 0.6rem; overflow-x: auto;">
+          <button class="quick-chip" data-q="Why did 22 agents abandon at the pricing stage?" style="background: var(--bg-paper); border: 1px solid var(--border-rule); padding: 3px 8px; border-radius: 2px; font-size: 0.72rem; cursor: pointer; white-space: nowrap;">
+            "Why did agents bounce at pricing?"
+          </button>
+          <button class="quick-chip" data-q="Was the initial hero headline clear or confusing?" style="background: var(--bg-paper); border: 1px solid var(--border-rule); padding: 3px 8px; border-radius: 2px; font-size: 0.72rem; cursor: pointer; white-space: nowrap;">
+            "Was the hero headline confusing?"
+          </button>
+          <button class="quick-chip" data-q="What single change would convince skeptics to convert?" style="background: var(--bg-paper); border: 1px solid var(--border-rule); padding: 3px 8px; border-radius: 2px; font-size: 0.72rem; cursor: pointer; white-space: nowrap;">
+            "What single change guarantees conversion?"
+          </button>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <div style="display: flex; gap: 0.6rem;">
+          <input
+            type="text"
+            id="chatInput"
+            class="editorial-input"
+            placeholder="Ask the synthetic cohort any question..."
+            style="font-size: 0.85rem; padding: 0.6rem 0.85rem;"
+          />
+          <button id="chatSubmitBtn" class="btn-editorial-primary" style="padding: 0.6rem 1.1rem;">
+            Submit
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Editorial Colophon Footer -->
+  <footer style="max-width: 1440px; margin: 3rem auto 0 auto; padding: 1.5rem 2rem; border-top: 2px solid var(--border-rule); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--ink-muted);">
+    <div>
+      <span>PersonaPulse Elite • Powered by MiroFish Multi-Agent Swarm Intelligence</span>
+    </div>
+    <div style="display: flex; gap: 1.5rem;">
+      <span>100% Open Access</span>
+      <span>Zero Subscription Paywall</span>
+      <span>Archival Soft Light Edition</span>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
